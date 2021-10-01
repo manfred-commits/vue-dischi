@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Header/>
+    <Header :image="headerImage" :title="'Spotify logo'"/>
     <Albums/>
   </div>
 </template>
@@ -16,6 +16,12 @@ export default {
   components: {
     Header,
     Albums
+  },
+  data(){
+    return{
+      headerImage: require('./assets/images/spotify-logo.png'),
+
+    }
   },
   created(){
     axios
