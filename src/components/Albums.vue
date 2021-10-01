@@ -1,6 +1,11 @@
 <template>
   <section class="albums"  >
-      <Album v-for="(album,index) in albums" :key="index"/>
+      <Album v-for="(album,index) in albums" 
+      :key="index" 
+      :image="album.poster"
+      :title="album.title"
+      :author="album.author"
+      :year="album.year"/>
 
   </section>
 </template>

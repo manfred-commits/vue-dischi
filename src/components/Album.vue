@@ -1,10 +1,10 @@
 <template>
     <section class="album">
-        <img  src="https://www.onstageweb.com/wp-content/uploads/2018/09/bon-jovi-new-jersey.jpg" alt="">
+        <img  :src="image" :alt="title">
         <div class="albums-text">
-            <h3>New Jersey</h3>
-            <h4>Bon Jovi</h4>
-            <h6>1988</h6>
+            <h3>{{title}}</h3>
+            <h4>{{author}}</h4>
+            <h6>{{year}}</h6>
         </div>
     </section>
     
@@ -14,7 +14,7 @@
 
 export default {
     name:'Album',
-    props:[]
+    props:[ 'image','author','title','year']
     
 }
 </script>
