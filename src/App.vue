@@ -8,7 +8,6 @@
 <script>
 import Header from './components/Header.vue'
 import Albums from './components/Albums.vue'
-import axios from 'axios'
 
 
 export default {
@@ -23,13 +22,7 @@ export default {
 
     }
   },
-  created(){
-    axios
-    .get("https://flynn.boolean.careers/exercises/api/array/music")
-    .then( (response) => {
-      console.log(response);
-    });
-  }
+  
 }
 </script>
 

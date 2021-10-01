@@ -1,5 +1,5 @@
 <template>
-    <header class="col-12 text-start px-2 py-2">
+    <header >
         <img :src="image" :alt="title">
     </header>
 </template>
@@ -16,12 +16,16 @@ export default {
 @import '../assets/style/variables.scss';
 
 header{
-    
+    display: flex;
+    justify-content: flex-start;
     background-color: $header_background_color;
+    height: 3.75rem;
+
     img{
+        margin-left: 20px;
         object-fit: contain;
         height: 100%;
-        width: 2.5rem;
+        width: 3.5rem;
     }
 
 
