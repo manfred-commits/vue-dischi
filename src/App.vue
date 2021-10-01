@@ -19,7 +19,6 @@ export default {
   data(){
     return{
       headerImage: require('./assets/images/spotify-logo.png'),
-
     }
   },
   
