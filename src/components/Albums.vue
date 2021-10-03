@@ -1,5 +1,5 @@
 <template>
-  <section class="albums my-2 gy-3 g-0 row row-cols-2 row-cols-md-5 row-cols-lg-5 justify-content-center align-self-start"  >
+  <section class="albums my-1 gy-3 g-0 row row-cols-1 row-cols-md-2 row-cols-lg-5 justify-content-center align-self-start"  >
       <Album v-for="(album,index) in albums" 
       :key="index" 
       :image="album.poster"
