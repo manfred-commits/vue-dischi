@@ -19,12 +19,12 @@ header{
     display: flex;
     justify-content: flex-start;
     background-color: $header_background_color;
+    width: 100%;
     height: 3.75rem;
 
     img{
-        margin-left: 20px;
+        margin-left: 1.25rem;
         object-fit: contain;
-        height: 100%;
         width: 3.5rem;
     }
 

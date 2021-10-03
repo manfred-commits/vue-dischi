@@ -1,11 +1,15 @@
 <template>
-    <section class="album">
-        <img  :src="image" :alt="title">
-        <div class="albums-text">
-            <h3>{{title}}</h3>
-            <h4>{{author}}</h4>
-            <h6>{{year}}</h6>
+    <section class="album px-1 py-2 ">
+        <div class="inner-container d-flex flex-wrap align-items-start justify-content-center">
+            <img  :src="image" :alt="title">
+            <div class="albums-text">
+                <h3>{{title}}</h3>
+                <h4>{{author}}</h4>
+                <h6>{{year}}</h6>
+            </div>
+
         </div>
+
     </section>
     
 </template>
@@ -24,27 +28,33 @@ export default {
 
 
 .album{
-    background-color: $album_background_color;
-    width: calc(100% / 5 - 2.50rem);
-    margin: .625rem 1.25rem;
-    text-align: center;
-    img{
-        padding: .125rem;
-        object-fit: contain;
-        width: 100%;
-    }
 
+    .inner-container{
 
-    .albums-text{
+        background-color: $album_background_color;
+        height: 100%;
+        text-align: center;
+        padding: .9375rem;
 
-        h3{
-            font-size: 20px;
-            color: $primary_album_h3_color;
+        img{
+
+            object-fit: contain;
+            width: 100%;
         }
-        h4,h6{
-            font-size: .875rem;
-            color: $secondary_album_text_color;
+
+
+        .albums-text{
+
+            h3{
+                font-size: 1.25rem;
+                color: $primary_album_h3_color;
+            }
+            h4,h6{
+                font-size: .875rem;
+                color: $secondary_album_text_color;
+            }
         }
     }
+    
 }
 </style>

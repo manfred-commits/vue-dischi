@@ -1,5 +1,5 @@
 <template>
-  <section class="albums"  >
+  <section class="albums my-2 gy-3 g-0 row row-cols-2 row-cols-md-5 row-cols-lg-5 justify-content-center align-self-start"  >
       <Album v-for="(album,index) in albums" 
       :key="index" 
       :image="album.poster"
@@ -41,11 +41,6 @@ export default {
 
 <style lang="scss" scope>
 .albums{
-    display: flex;
-    flex-wrap: wrap;
-    width: 70%;
-    margin: auto;
-    padding: 1.25rem;
-    height: calc(100vh - 3.75rem);
+  width: 70%;
 }
 </style>
