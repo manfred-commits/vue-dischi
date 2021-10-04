@@ -23,38 +23,58 @@ export default {
     data(){
         return{
             albums:[],
+            iconCategories:[]
         }
+    },
+    methods:{
+      selectFiller(){
+        console.log("ciao");
+        console.log(this.albums);
+        this.albums.forEach(
+          (element) => {
+            console.log("ciao");
+
+            if(!this.iconCategories.includes(element.genre)){
+                this.iconCategories.push(element.genre);
+                console.log("ciao");
+            }
+          }
+        );
+
+      }
     },
     computed:{
       albumFilter(){
         const albumsFiltered = this.albums.filter(
           (element)=>{
-            console.log(element.genre);
+            // console.log(element.genre);
             
-            console.log(this.genreType);
+            // console.log(this.genreType);
 
-            console.log(element.genre.toLowerCase());
-            console.log(this.genreType.toLowerCase());
+            // console.log(element.genre.toLowerCase());
+            // console.log(this.genreType.toLowerCase());
 
 
-            console.log(element.genre.toLowerCase().includes(this.genreType.toLowerCase()));
+            // console.log(element.genre.toLowerCase().includes(this.genreType.toLowerCase()));
 
             return element.genre.toLowerCase().includes(this.genreType.toLowerCase());
           }
         );
+        this.selectFiller();
       
       return albumsFiltered;
       }
     },
     created(){
+
     axios
     .get("https://flynn.boolean.careers/exercises/api/array/music")
     .then( (response) => {
-      console.log(response);
+      // console.log(response);
       this.albums=response.data.response;
-      console.log(this.albums);
+      // console.log(this.albums);
 
-    });
+    })
   }
 
 }
