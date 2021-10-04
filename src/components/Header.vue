@@ -3,10 +3,7 @@
         <img :src="image" :alt="title">
         <select name="genre" v-model="selectedGenre" @change="$emit('genre',selectedGenre)">
             <option value="">Scegli un genere</option>
-            <option value="Rock">Rock</option>
-            <option value="Pop">Pop</option>
-            <option value="Jazz">Jazz</option>
-            <option value="Metal">Metal</option>
+            <option v-for="(select,index) in selectValues" :key="index" :value="select">{{select}}</option>
         </select>
     </header>
 </template>

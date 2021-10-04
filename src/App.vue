@@ -4,7 +4,8 @@
       <Header 
       :image="headerImage" 
       :title="'Spotify logo'" 
-      @genre="genreFilter"/>
+      @genre="genreFilter"
+      :selectValues="selectArray"/>
       <Albums 
       :genreType="selectedGenre" 
       @select="selectArr"/>
