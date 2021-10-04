@@ -1,6 +1,16 @@
 <template>
     <header>
         <img :src="image" :alt="title">
+
+
+        <select name="artist" v-model="currentArtist" @change="$emit('artist',currentArtist)">
+            <option value="">Scegli un artista</option>
+            <option value="Bon Jovi">Bon Jovi</option>
+            <option value="Queen">Queen</option>
+            <!-- <option v-for="(select,index) in selectValues" :key="index" :value="select">{{select}}</option> -->
+        </select>
+
+
         <select name="genre" v-model="selectedGenre" @change="$emit('genre',selectedGenre)">
             <option value="">Scegli un genere</option>
             <option v-for="(select,index) in selectValues" :key="index" :value="select">{{select}}</option>
@@ -15,6 +25,7 @@ export default {
     data(){
         return{
             selectedGenre:"",
+            currentArtist:"",
         }
     }
 }

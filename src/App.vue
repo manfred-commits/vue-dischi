@@ -4,10 +4,12 @@
       <Header 
       :image="headerImage" 
       :title="'Spotify logo'" 
+      @artist="artistFilter"
       @genre="genreFilter"
       :selectValues="selectArray"/>
       <Albums 
-      :genreType="selectedGenre" 
+      :genreType="selectedGenre"
+      :artistSelect="selectedArtist"
       @select="selectArr"/>
     </section>
   </div>
@@ -28,6 +30,7 @@ export default {
     return{
       headerImage: require('./assets/images/spotify-logo.png'),
       selectedGenre: "",
+      selectedArtist:"",
       selectArray:[],
     }
   },
@@ -40,9 +43,14 @@ export default {
       
 
     },
+    artistFilter(selectedArtist){
+      // console.log(selectedArtist);
+      this.selectedArtist=selectedArtist;
+
+    },
     selectArr(selectEl){
-      console.log(selectEl);
-      console.log(this.selectArray);
+      // console.log(selectEl);
+      // console.log(this.selectArray);
       this.selectArray=selectEl;
     }
   },
