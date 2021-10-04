@@ -1,7 +1,7 @@
 <template>
   <div id="app"> 
     <section class="container-page d-flex flex-wrap justify-content-center ">
-      <Header :image="headerImage" :title="'Spotify logo'"/>
+      <Header :image="headerImage" :title="'Spotify logo'" @genre="genreFilter"/>
       <Albums/>
     </section>
   </div>
@@ -23,6 +23,11 @@ export default {
       headerImage: require('./assets/images/spotify-logo.png'),
     }
   },
+  methods:{
+    genreFilter(selectedGenre){
+      console.log(selectedGenre);
+    }
+  }
   
 }
 </script>

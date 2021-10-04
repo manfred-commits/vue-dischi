@@ -1,7 +1,7 @@
 <template>
     <header>
         <img :src="image" :alt="title">
-        <select name="genre" v-model="selectedGenre">
+        <select name="genre" v-model="selectedGenre" @change="$emit('genre',selectedGenre)">
             <option value="">Scegli un genere</option>
             <option value="Rock">Rock</option>
             <option value="Pop">Pop</option>
