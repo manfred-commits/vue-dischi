@@ -26,10 +26,10 @@ export default {
   },
   methods:{
     genreFilter(selectedGenre){
-      console.log(selectedGenre);
-      console.log(this.selectedGenre);
+      // console.log(selectedGenre);
+      // console.log(this.selectedGenre);
       this.selectedGenre=selectedGenre;
-      console.log(this.selectedGenre);
+      // console.log(this.selectedGenre);
 
 
     }
