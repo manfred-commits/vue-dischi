@@ -6,7 +6,8 @@
       :title="'Spotify logo'" 
       @artist="artistFilter"
       @genre="genreFilter"
-      :selectValues="selectArray"/>
+      :selectValues="selectArray"
+      :authorValues="selectArAuthor"/>
       <Albums 
       :genreType="selectedGenre"
       :artistSelect="selectedArtist"

@@ -5,9 +5,7 @@
 
         <select name="artist" v-model="currentArtist" @change="$emit('artist',currentArtist)">
             <option value="">Scegli un artista</option>
-            <option value="Bon Jovi">Bon Jovi</option>
-            <option value="Queen">Queen</option>
-            <!-- <option v-for="(select,index) in selectValues" :key="index" :value="select">{{select}}</option> -->
+            <option v-for="(select,index) in authorValues" :key="index" :value="select">{{select}}</option>
         </select>
 
 
@@ -21,7 +19,7 @@
 <script>
 export default {
     name:'Header',
-    props:['image','title', 'selectValues'],
+    props:['image','title', 'selectValues','authorValues'],
     data(){
         return{
             selectedGenre:"",
