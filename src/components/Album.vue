@@ -1,11 +1,11 @@
 <template>
     <section class="album px-1 py-2 ">
         <div class="inner-container d-flex flex-wrap align-items-start justify-content-center">
-            <img  :src="image" :alt="title">
+            <img  :src="album.poster" :alt="album.author">
             <div class="albums-text">
-                <h3>{{title}}</h3>
-                <h4>{{author}}</h4>
-                <h6>{{year}}</h6>
+                <h3>{{album.title}}</h3>
+                <h4>{{album.author}}</h4>
+                <h6>{{album.year}}</h6>
             </div>
 
         </div>
@@ -18,7 +18,7 @@
 
 export default {
     name:'Album',
-    props:[ 'image','author','title','year']
+    props:[ 'album']
     
 }
 </script>
