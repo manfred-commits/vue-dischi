@@ -23,7 +23,8 @@ export default {
     data(){
         return{
             albums:[],
-            iconCategories:[]
+            iconCategories:[],
+            authorCategories:[]
         }
     },
     methods:{
@@ -36,6 +37,20 @@ export default {
 
             if(!this.iconCategories.includes(element.genre)){
                 this.iconCategories.push(element.genre);
+                // console.log("ciao");
+            }
+          }
+        );
+      },
+      selectAuthor(){
+        // console.log("ciao");
+        // console.log(this.albums);
+        this.albums.forEach(
+          (element) => {
+            // console.log("ciao");
+
+            if(!this.authorCategories.includes(element.author)){
+                this.authorCategories.push(element.author);
                 // console.log("ciao");
             }
           }
@@ -77,8 +92,11 @@ export default {
       this.albums=response.data.response;
       // console.log(this.albums);
       this.selectFiller();
+      this.selectAuthor();
 
       // console.log(this.iconCategories);
+      this.$emit('author',this.authorCategories);
+
       this.$emit('select',this.iconCategories);
     })
   }

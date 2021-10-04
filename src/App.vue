@@ -10,7 +10,8 @@
       <Albums 
       :genreType="selectedGenre"
       :artistSelect="selectedArtist"
-      @select="selectArr"/>
+      @select="selectArr"
+      @author="selectAuth"/>
     </section>
   </div>
 </template>
@@ -32,6 +33,7 @@ export default {
       selectedGenre: "",
       selectedArtist:"",
       selectArray:[],
+      selectArAuthor:[],
     }
   },
   methods:{
@@ -46,6 +48,11 @@ export default {
     artistFilter(selectedArtist){
       // console.log(selectedArtist);
       this.selectedArtist=selectedArtist;
+
+    },
+    selectAuth(selectA){
+      // console.log(selectA);
+      this.selectArAuthor=selectA;
 
     },
     selectArr(selectEl){
