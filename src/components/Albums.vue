@@ -70,11 +70,9 @@ export default {
 
 
             // console.log(element.genre.toLowerCase().includes(this.genreType.toLowerCase()));
-            if(this.genreType!=""){
-              return element.genre.toLowerCase().includes(this.genreType.toLowerCase());
+            return element.genre.toLowerCase().includes(this.genreType.toLowerCase()) && element.author.toLowerCase().includes(this.artistSelect.toLowerCase());
 
-            }
-            return element.author.toLowerCase().includes(this.artistSelect.toLowerCase());
+           
 
           }
         );
