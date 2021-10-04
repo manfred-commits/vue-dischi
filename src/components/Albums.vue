@@ -28,19 +28,18 @@ export default {
     },
     methods:{
       selectFiller(){
-        console.log("ciao");
-        console.log(this.albums);
+        // console.log("ciao");
+        // console.log(this.albums);
         this.albums.forEach(
           (element) => {
-            console.log("ciao");
+            // console.log("ciao");
 
             if(!this.iconCategories.includes(element.genre)){
                 this.iconCategories.push(element.genre);
-                console.log("ciao");
+                // console.log("ciao");
             }
           }
         );
-
       }
     },
     computed:{
@@ -60,7 +59,6 @@ export default {
             return element.genre.toLowerCase().includes(this.genreType.toLowerCase());
           }
         );
-        this.selectFiller();
       
       return albumsFiltered;
       }
@@ -73,7 +71,10 @@ export default {
       // console.log(response);
       this.albums=response.data.response;
       // console.log(this.albums);
+      this.selectFiller();
 
+      // console.log(this.iconCategories);
+      this.$emit('select',this.iconCategories);
     })
   }
 

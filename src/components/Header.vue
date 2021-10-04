@@ -14,7 +14,7 @@
 <script>
 export default {
     name:'Header',
-    props:['image','title'],
+    props:['image','title', 'selectValues'],
     data(){
         return{
             selectedGenre:"",

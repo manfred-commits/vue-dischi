@@ -1,8 +1,13 @@
 <template>
   <div id="app"> 
     <section class="container-page d-flex flex-wrap justify-content-center ">
-      <Header :image="headerImage" :title="'Spotify logo'" @genre="genreFilter"/>
-      <Albums :genreType="selectedGenre"/>
+      <Header 
+      :image="headerImage" 
+      :title="'Spotify logo'" 
+      @genre="genreFilter"/>
+      <Albums 
+      :genreType="selectedGenre" 
+      @select="selectArr"/>
     </section>
   </div>
 </template>
@@ -22,6 +27,7 @@ export default {
     return{
       headerImage: require('./assets/images/spotify-logo.png'),
       selectedGenre: "",
+      selectArray:[],
     }
   },
   methods:{
@@ -30,10 +36,15 @@ export default {
       // console.log(this.selectedGenre);
       this.selectedGenre=selectedGenre;
       // console.log(this.selectedGenre);
+      
 
-
+    },
+    selectArr(selectEl){
+      console.log(selectEl);
+      console.log(this.selectArray);
+      this.selectArray=selectEl;
     }
-  }
+  },
   
 }
 </script>
