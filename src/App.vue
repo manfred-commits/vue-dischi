@@ -3,7 +3,6 @@
     <section class="container-page d-flex flex-wrap justify-content-center ">
       <Header :image="headerImage" :title="'Spotify logo'"/>
       <Albums/>
-
     </section>
   </div>
 </template>
@@ -31,6 +30,5 @@ export default {
 <style lang="scss">
 @import './assets/style/common.scss';
 @import './assets/style/variables.scss';
-
 
 </style>
